@@ -1,0 +1,54 @@
+#!/bin/bash -l
+
+#SBATCH -q defq
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:50:00
+#SBATCH -J hw2p2 
+#SBATCH -o hw2p2.%j.out
+#SBATCH -e hw2p2.%j.error
+
+echo "No flag\n"
+
+./hw2p2 2048 16
+./hw2p2 2048 32
+./hw2p2 2048 64
+./hw2p2 2048 128
+./hw2p2 2048 256
+./hw2p2 2048 512
+
+echo "-O0"
+
+./hw2p2O0 2048 16
+./hw2p2O0 2048 32
+./hw2p2O0 2048 64
+./hw2p2O0 2048 128
+./hw2p2O0 2048 256
+./hw2p2O0 2048 512
+
+echo "-O1"
+
+./hw2p2O1 2048 16
+./hw2p2O1 2048 32
+./hw2p2O1 2048 64
+./hw2p2O1 2048 128
+./hw2p2O1 2048 256
+./hw2p2O1 2048 512
+
+echo "-O2"
+
+./hw2p2O2 2048 16
+./hw2p2O2 2048 32
+./hw2p2O2 2048 64
+./hw2p2O2 2048 128
+./hw2p2O2 2048 256
+./hw2p2O2 2048 512
+
+echo "-O3"
+
+./hw2p2O3 2048 16
+./hw2p2O3 2048 32
+./hw2p2O3 2048 64
+./hw2p2O3 2048 128
+./hw2p2O3 2048 256
+./hw2p2O3 2048 512

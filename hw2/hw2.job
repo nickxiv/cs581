@@ -1,0 +1,16 @@
+#!/bin/bash -l
+
+#SBATCH -q defq
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:50:00
+#SBATCH -J hw2 
+#SBATCH -o hw2.%j.out
+#SBATCH -e hw2.%j.error
+
+./hw2 2048 16
+./hw2 2048 32
+./hw2 2048 64
+./hw2 2048 128
+./hw2 2048 256
+./hw2 2048 512
