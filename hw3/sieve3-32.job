@@ -1,0 +1,12 @@
+#!/bin/bash -l
+
+#SBATCH -q defq
+#SBATCH -N 1
+#SBATCH -n 32 
+#SBATCH -t 00:50:00
+#SBATCH -J sieve3 
+#SBATCH -o sieve3-32.%j.out
+#SBATCH -e sieve3-32.%j.error
+
+echo "sieve3-32"
+mpiexec -v -np 32 sieve3 10000000000
